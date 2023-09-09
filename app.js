@@ -10,6 +10,6 @@ const name = 'james';
 console.log(name);
 
 app.get('/', (req, res) => {
-    res.sendFile('./views/index.js', { root: __dirname })
+    //res.sendFile('./views/index.js', { root: __dirname })
     res.render('index');
 })
