@@ -20,3 +20,18 @@ app.get('/hero', (req, res) => {
     //res.sendFile('./views/index.js', { root: __dirname })
     res.render('hero');
 })
+
+app.get('/graphs', (req, res) => {
+    //res.sendFile('./views/index.js', { root: __dirname })
+    res.render('graphs');
+})
+
+app.get('/particles', (req, res) => {
+    //res.sendFile('./views/index.js', { root: __dirname })
+    res.render('particles');
+})
+
+app.get('/particles2', (req, res) => {
+    //res.sendFile('./views/index.js', { root: __dirname })
+    res.render('particles2');
+})
