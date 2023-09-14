@@ -13,7 +13,7 @@ app.use(express.static('public'));
 
 app.get('/', (req, res) => {
     //res.sendFile('./views/index.js', { root: __dirname })
-    res.render('index');
+    res.render('particles3');
 })
 
 app.get('/hero', (req, res) => {
@@ -34,4 +34,9 @@ app.get('/particles', (req, res) => {
 app.get('/particles2', (req, res) => {
     //res.sendFile('./views/index.js', { root: __dirname })
     res.render('particles2');
+})
+
+app.get('/particles3', (req, res) => {
+    //res.sendFile('./views/index.js', { root: __dirname })
+    res.render('particles3');
 })
