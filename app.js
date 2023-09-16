@@ -1,7 +1,19 @@
 // alt shift F
 const express = require('express');
 const app = express();
-app.listen(3000);
+var port = process.env.port || 3000;
+
+app.listen(port);
+console.log ("listen port is %s", port);
+
+/* var server = app.listen(3000, "127.0.0.1", function() {
+   console.log("inside app.listen's callback function.");
+   var host= server.address().address;
+   var port= server.address().port;
+   console.log('app listening at http://%s:%s', host, port);
+});
+ */
+
 
 //register view engine
 app.set('view engine', 'ejs');
@@ -12,31 +24,22 @@ console.log(name);
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    //res.sendFile('./views/index.js', { root: __dirname })
-    res.render('particles3');
+    res.render('index');
 })
 
 app.get('/hero', (req, res) => {
-    //res.sendFile('./views/index.js', { root: __dirname })
     res.render('hero');
 })
 
 app.get('/graphs', (req, res) => {
-    //res.sendFile('./views/index.js', { root: __dirname })
     res.render('graphs');
 })
 
 app.get('/particles', (req, res) => {
-    //res.sendFile('./views/index.js', { root: __dirname })
     res.render('particles');
 })
 
 app.get('/particles2', (req, res) => {
-    //res.sendFile('./views/index.js', { root: __dirname })
-    res.render('particles2');
+    res.render('particles_in_card_img');
 })
 
-app.get('/particles3', (req, res) => {
-    //res.sendFile('./views/index.js', { root: __dirname })
-    res.render('particles3');
-})

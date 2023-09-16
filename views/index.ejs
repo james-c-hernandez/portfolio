@@ -1,81 +1,126 @@
 <!doctype html>
 <html lang="en">
-<%- include('./partials/head00.ejs') %>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body,
+		html {
+			height: 100%;
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+	</style>
+
+	<%- include('./partials/landing_hero_css.ejs') %>
+		<%- include('./partials/particles_css.ejs') %>
+
+			<title>James - Expert Software Architect and Team Leader</title>
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+				integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+				crossorigin="anonymous">
+</head>
 
 <body>
+	<p></p>
 	<div class="container-fluid mt-3"></div>
-	<div class="hero-image">
+	<div class="hero-image" id="particles-js" style="max-height: 350px;">
 		<div class="hero-text">
 			<h1 style="font-size:50px">James C Hernandez</h1>
-			<p>Sr. Software Developer</p>
-			<button>What I Can Bring To Your Team</button>
+			<h2>Your Ideas turned into Results</h2>
+			<h3>Leadership with a solid technical background</h3>
+			<button type="button" class="btn brn-light">What I Can Bring To Your Team</button>
 		</div>
 	</div>
 
 	<p></p>
 
+	<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+	<p></p>
+
 	<div class="container">
 		<div class="row gy-2">
-			
-			<div class="col-lg-3 col-md-4">
-				<div class="box bg-light h-100 d-flex p-4 flex-column text-blue shadow p-3 mb-5 bg-body rounded">
-					<img src="..." alt="">
-					<h1>Expertise</h1>
-					<p>As early as 15, when I developed my first video game called Proton-Patrol, I had a passion for software 
-						development and systems design. Today this continues with software for automation, robotics,
-					    GPS, sensors, web based applications and mobile phone/tablet development for my career and self directed learning. </p>
-					<a href="#" class="btn btn-dark">Read More</a>
-				</div>
-			</div>
 
 			<div class="col-lg-3 col-md-4">
 				<div class="box bg-light h-100 d-flex p-4 flex-column text-blue shadow p-3 mb-5 bg-body rounded">
-					<img src="..." alt="">
+					<!-- <img src="https://images.pexels.com/photos/3153199/pexels-photo-3153199.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""> -->
+					<img src="https://images.pexels.com/photos/5716033/pexels-photo-5716033.jpeg?auto=compress&cs=tinysrgb&w=1600"
+						alt="">
 					<h1>Leadership</h1>
-					<p> I can develop effective teams consisting of a group of people who work together to achieve
-						 a shared goal or outcome.
-						 An effective leader who guides the team towards the goal or objectives that the 
-						 team needs to achieve. Effective teams have a clear understanding of the team’s objectives 
-						 and goals, a range of skills and know-how among team members to handle tasks effectively, 
-						 a variety of personality types and strengths
-					</p>
+					<p> Having attained my <B>MBA</B> after my <B>BSCS</B>, it gave me unique insight into developing
+						effective teams consisting and how clear objectives lead a group of people who work together to
+						achieve
+						a shared goal.</p>
+					<p>I use performance metrics to achieve consistently improving results, determine Returns on
+						Investments, Total Costs of Ownership, Opportunity Costs, and Project Capabilities and Costs.
+						Workforce management is also key to building highly effective team using effective people and
+						communication skills </p>
 					<a href="#" class="btn btn-dark">Read More</a>
 				</div>
 			</div>
 
 			<div class="col-lg-3 col-md-4">
 				<div class="box bg-light h-100 d-flex p-4 flex-column text-blue shadow p-3 mb-5 bg-body rounded">
-					<img src="..." alt="">
-					<h1>Value Generation </h1>
-					<p>By reducing the total cost of ownership, maximizing return on investment (ROI) using efficiency metrics. 
-						I have increased team efficiency and output, reduced costs and defects. Building clear efficienct systems
+					<img src="https://images.pexels.com/photos/5053848/pexels-photo-5053848.jpeg?auto=compress" alt="">
+					<h1>Technical Background</h1>
+					<!-- <div id="particles-js" class="img-responsive" style="max-height:100px;"></div> -->
+					<!-- <div  class="img-responsive"><img src="https://images.pexels.com/photos/5053848/pexels-photo-5053848.jpeg?auto=compress" class="img-responsive"   style="max-height: 200px;width:min-content"></div>  -->
+
+					<p>My Bachelors Degree in Computer Science from the University of Maryland was the realization of my
+						software passion from the age of 15, when I developed my first video game called Proton-Patrol.
+					</p>
+					<p>Today this passion drives me to learn the latest technologies and developments so that they can
+						improve our lives. Today this continues with and interest automation, robotics, GPS devices,
+						sensors, mobile development
+						and the Internet of Things (IOT) for embedded micro devices</p>
+					<a href="#" class="btn btn-dark">Read More</a>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-4">
+				<div class="box bg-light h-100 d-flex p-4 flex-column text-blue shadow p-3 mb-5 bg-body rounded">
+					<img src="https://images.pexels.com/photos/5716001/pexels-photo-5716001.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+						alt="">
+					<h1>Portfolio of Success</h1>
+					<p>By reducing the total cost of ownership, maximizing return on investment (ROI) using efficiency
+						metrics.
+						I have increased team efficiency and output, reduced costs and defects. Building clear
+						efficient systems
 						and team skill development using cross training and mentoring.
-						 </p>
-					<a href="#" class="btn btn-dark">Read More</a>
-				</div>
-			</div>
-
-			<div class="col-lg-3 col-md-4">
-				<div class="box bg-light h-100 d-flex p-4 flex-column text-blue shadow p-3 mb-5 bg-body rounded">
-					<img src="..." alt="">
-					<h1>Drive</h1>
-					<p>Successful people are known for having clear-cut goals that they work hard to reach.
-						I have the ability to take initiative to improve processes. Vision, patience, and focus
-						builds upon a string of small achievements into a larger success story.
-						I can overcome obstacles and make progress on my own when neccessary. 
 					</p>
 					<a href="#" class="btn btn-dark">Read More</a>
 				</div>
 			</div>
 
-			
 			<div class="col-lg-3 col-md-4">
 				<div class="box bg-light h-100 d-flex p-4 flex-column text-blue shadow p-3 mb-5 bg-body rounded">
-					<img src="..." alt="">
-					<h1>Eduction and Self Directed Learning</h1>
-					<p>My Bachelors in Computer Science from the University of Maryland, and my Graduate Masters of Business Administration (MBA)
-						with a concentration in Project Management taught me how to achieve consistent successful results. We live in intersting times 
-						and I find ways to learn new things whenever possible to keep my mind sharp and ideas fresh. 
+					<img src="https://images.pexels.com/photos/999267/pexels-photo-999267.jpeg?auto=compress&cs=tinysrgb&w=1600"
+						alt="">
+					<!-- <img src="https://images.pexels.com/photos/258045/pexels-photo-258045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""> -->
+					<h1>Drive</h1>
+					<p>Successful people are known for having clear-cut goals that they work hard to reach.</p>
+					<p>
+						I have the ability to take initiative to improve processes. Vision, patience, and focus.</p>
+					<p>
+						Success builds upon a string of small achievements that amount to a larger success story.
+						I can overcome obstacles and make progress on my own when necessary.
+					</p>
+					<a href="#" class="btn btn-dark">Read More</a>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-4">
+				<div class="box bg-light h-100 d-flex p-4 flex-column text-blue shadow p-3 mb-5 bg-body rounded">
+					<img src="https://images.pexels.com/photos/3058762/pexels-photo-3058762.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+						alt="">
+					<h1>Education and Self Directed Learning</h1>
+					<p>My Bachelors in Computer Science from the University of Maryland, and my Graduate Masters of
+						Business Administration (MBA)
+						with a concentration in Project Management taught me how to achieve consistent successful
+						results. We live in interesting times
+						and I find ways to learn new things whenever possible to keep my mind sharp and ideas fresh.
 					</p>
 					<a href="#" class="btn btn-dark">Read More</a>
 				</div>
@@ -87,8 +132,11 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
-	</script>
+		</script>
 	</div>
+
+	<%- include('./partials/particles_script.ejs') %>
+
 </body>
 
 </html>
