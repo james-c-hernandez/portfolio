@@ -24,6 +24,10 @@ console.log(name);
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
+    res.render('index2');
+})
+
+app.get('/index2', (req,res) => {
     res.render('index');
 })
 
