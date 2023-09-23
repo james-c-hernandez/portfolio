@@ -1,6 +1,7 @@
 // alt shift F
 const express = require('express');
 const app = express();
+const path = require('path');
 var port = process.env.port || 3000;
 
 app.listen(port);
@@ -18,6 +19,10 @@ console.log ("listen port is %s", port);
 //register view engine
 app.set('view engine', 'ejs');
 
+app.use(express.json());
+app.use(express.static(path.join(__dirname, '/public')));
+app.use('/portfolio', require('./routes/portfolio'));
+
 const name = 'james';
 console.log(name);
 
@@ -29,6 +34,10 @@ app.get('/', (req, res) => {
 
 app.get('/index2', (req,res) => {
     res.render('index');
+})
+
+app.get('/portfolio', (req,res) => {
+    res.render('../portfolio/index');
 })
 
 app.get('/hero', (req, res) => {
