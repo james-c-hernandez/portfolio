@@ -33,12 +33,13 @@
 			position: relative;
 			cursor: default;
 		}
+
 		[data-tooltip]::after {
 			position: absolute;
 			width: 280px;
 			left: calc(50%- 70px);
 			bottom: 125%;
-			text-align:center;
+			text-align: center;
 			box-sizing: border-box;
 			content: attr(data-tooltip);
 			background: yellow;
@@ -56,6 +57,24 @@
 			opacity: 1;
 			visibility: visible;
 			transform: translateY(0);
+			z-index: 1000;
+		}
+	</style>
+
+	<style>
+		/* .back-video {
+			position: relative;
+			right:0;
+			bottom:0;
+			z-index: -1;
+		} */
+
+		@media(max-aspect-ratio: 16/9) {
+			.back-video{
+				width:100%;
+				height: 100%;
+
+			}
 		}
 	</style>
 
@@ -114,29 +133,41 @@
 <body>
 	<p></p>
 	<div class="container-fluid mt-3"></div>
-	<div class="hero-image" id="particles-js" style="max-height: 350px;overflow: hidden;">
+
+	<!-- HERO section with background video and text overlay -->
+    <section id="hero" class="d-flex align-items-center" style="max-height: 350px;overflow: hidden;">
+        <video autoplay muted loop id="myVideo" class="back-video">
+			<!-- <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4" style="object-fit: fill !important;"> -->
+			<source src="SUNNWATER.mp4" type="video/mp4" style="object-fit: fill !important;">
+        </video>
+        <div class="container position-absolute" data-aos="fade-up" data-aos-delay="500" style="color: white;">
+            <h1>James C Hernandez</h1>
+            <h2>Highlights of my work. Most when I was contractor brought in to solve problems while also achieving my BSCS and MBA</h2>
+            <!-- <a href="#about" class="btn-get-started scrollto">Get Started</a> -->
+			<a href="/" class="btn brn-primary" role="button">Back to top</a>
+        </div>
+		
+    </section><!-- End Hero -->
+
+
+<!-- 	<div class="hero-image" id="particles-js" style="max-height: 350px;overflow: hidden;">
 		<div class="hero-text">
-			<!-- <h1 style="font-size:50px">James C Hernandez</h1> -->
 			<div class="d-none d-sm-block">
 				<h1 class="fs-1">James C Hernandez</h1>
-				<h2 class="fs-3">Your Ideas turned into Results</h2>
-				<h3 class="fs-3">Leadership with a solid technical background</h3>
+				<h2 class="fs-3">My work that was done when I was contractor brought in to solve problems</h2>
 			</div>
 			<div class="d-sm-none d-md-none d-lg-none">
 				<h1 class="fs-2">James C Hernandez</h1>
-				<h2 class="fs-6">Your Ideas turned into Results</h2>
-				<h3 class="fs-6">Leadership with a solid technical background</h3>
+				<h2 class="fs-3">My work was done when I was contractor brought in to solve problems</h2>
 			</div>
-			<button type="button" class="btn brn-light">What I Can Bring To Your Team</button>
+			<button type="button" class="btn brn-light">Back to top</button>
 		</div>
-	</div>
+	</div> -->
 
 	<p></p>
 
 	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-	<p>Lists of Applications I created or was key developer of</p>
-	<p>I was a contractor and not a job hopper</p>
 
 	<div class="container">
 
@@ -149,15 +180,15 @@
 					<h1 style="color: green;">GEICO Commercial Auto Website - First responsive UI</h1>
 					<h3></h3>
 
-					<div class="accordion" id="accordionExample">
+					<div class="accordion z-index-n1" id="accordionExample" z-index="">
 						<div class="accordion-item">
-							<h2 class="accordion-header" id="headingOne">
+							<h2 class="accordion-header" id="headingG1">
 								<button class="accordion-button" type="button" data-bs-toggle="collapse"
-									data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									data-bs-target="#collapseG1" aria-expanded="true" aria-controls="collapseG1">
 									Business Scope
 								</button>
 							</h2>
-							<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+							<div id="collapseG1" class="accordion-collapse collapse" aria-labelledby="headingOne"
 								data-bs-parent="#accordionExample">
 								<div class="accordion-body">
 									GEICO, founded in 1936, manages more than 16 million auto policies in force and
@@ -170,56 +201,101 @@
 							</div>
 						</div>
 						<div class="accordion-item">
-							<h2 class="accordion-header" id="headingTwo">
+							<h2 class="accordion-header" id="headingG2">
 								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-									data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+									data-bs-target="#collapseG2" aria-expanded="false" aria-controls="collapseG2">
+									Technology I used
+								</button>
+							</h2>
+							<div id="collapseG2" class="accordion-collapse collapse" aria-labelledby="headingG1C"
+								data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									At that time, my mastery of new technologies put me far ahead of others. I was able
+									to quickly and effectively
+									use new technologies to see solutions. 
+									<a href="#"
+										data-tooltip="the same page rearranges elements and
+										size based on the viewers
+										screen size. Someone using a phone screen might see a different web layout then
+										someone on a desktop computer,
+										but all the same web page">Responsive web design</a>
+									. When I was researching one of the first smart phones in 2002,
+									so I could learn how to
+									code on it, I was in a hotel lobby and someone said @Sir why are you talking into
+									your kindle@?
+									- I still joke about that today. Today over a decade later, responsive web design is common and no longer a big deal, 
+									so I sit hear with my Virtual Reality rig next to me these days.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingG3">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseG3" aria-expanded="false" aria-controls="collapseG3">
 									The Problem I directly solved
 								</button>
 							</h2>
-							<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+							<div id="collapseG3" class="accordion-collapse collapse" aria-labelledby="headingTwo"
 								data-bs-parent="#accordionExample">
 								<div class="accordion-body">
-									I know the clean <A href="https://www.geico.com/commercial-auto-insurance/" target="_blank" rel="noopener noreferrer">GEICO Commercial Auto website</A> look is famous now, but when I was started at that company it's websites were many years old,cluttered, it was before the modern sleek look we know today. 
-									One day Website metric reports identified that there was a 100% drop off of customer applications on iPhone devices
+									I know the clean <A href="https://www.geico.com/commercial-auto-insurance/"
+										target="_blank" rel="noopener noreferrer">GEICO Commercial Auto website</A> look
+									is famous now, but when I was started at that company it's websites were many years
+									old,cluttered, it was before the modern sleek look we know today.
+									One day Website metric reports identified that there was a 100% drop off of customer
+									applications on iPhone devices
 									and a 90% drop off on Android Phones. <p></p>
-									<b>I discovered using a iPhone emulator on a web browser, that the "CONTINUE" button was off-page and not clickable on smartphones. </b>
+									<b>I discovered using a iPhone emulator on a web browser, that the "CONTINUE" button
+										was off-page and not clickable on smartphones. </b>
 									<p></p>Believe it or not, the website was not
-									<a href="#" data-tooltip="a obsolete fixed web page layout that does not dynamically adjust page elements based on screen size and aspect such as small smartphones">Responsive</a> back in 2010
-									and during our next daily scrum, I explained the problem and told the team I knew how to fix it. My solution was re-writing the existing site using responsive UI.
-									 <b>Management put me in charge of the project and gave me technical leadership</b> of a team of three developers including myself as lead.
-									commercial auto website UI upgrade for iPhone and Android smartphones and tablets.								
+									<a href="#"
+										data-tooltip="a obsolete fixed web page layout that does not dynamically adjust page elements based on screen size and aspect such as small smartphones">Responsive</a>
+									back in 2010
+									and during our next daily scrum, I explained the problem and told the team I knew
+									how to fix it. My solution was re-writing the existing site using responsive UI.
+									<b>Management put me in charge of the project and gave me technical leadership</b>
+									of a team of three developers including myself as lead.
+									commercial auto website UI upgrade for iPhone and Android smartphones and tablets.
 								</div>
 							</div>
 						</div>
 						<div class="accordion-item">
-							<h2 class="accordion-header" id="headingTwoB">
+							<h2 class="accordion-header" id="headingG4">
 								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-									data-bs-target="#collapseTwoB" aria-expanded="false" aria-controls="collapseTwoB">
+									data-bs-target="#collapseG4" aria-expanded="false" aria-controls="collapseG4">
 									Success Achieved
 								</button>
 							</h2>
-							<div id="collapseTwoB" class="accordion-collapse collapse" aria-labelledby="headingTwoB"
+							<div id="collapseG4" class="accordion-collapse collapse" aria-labelledby="headingTwoB"
 								data-bs-parent="#accordionExample">
 								<div class="accordion-body">
-									I modernized the GEICO Commercial Auto website in three weeks, which was record breaking for them. Specifically added new client side input Form Validation, First use of Glyph Icons, First Rounded Buttons and soft styles.   My update now allowed millions of customers to buy and manage their commercial
-									auto policies from their iPhone,Android phones now expanding business profit and customer satisfaction<p></p><b>After this success</b>, I
-									was put in charge of adding a new <a href="#" data-tooltip="a private citizen using their private auto to pickup and transport passengers for hire">Rideshare</a> capability to the website so  Uber, Lyft and other 
-									<a href="#" data-tooltip="a private citizen using their private auto to pickup and transport passengers for hire">rideshare</a>
-									 drivers to apply for commercial auto insurance since their personal auto insurance did not cover <a href="#" data-tooltip="a private citizen using their private auto to pickup and transport passengers for hire">rideshare</a>
-									  activity.
+									I modernized the GEICO Commercial Auto website in three weeks, which was record
+									breaking for them. Specifically added new client side input Form Validation, First
+									use of Glyph Icons, First Rounded Buttons and soft styles. My update now allowed
+									millions of customers to buy and manage their commercial
+									auto policies from their iPhone,Android phones now expanding business profit and
+									customer satisfaction<p></p><b>After this success</b>, I
+									was put in charge of adding a new <a href="#"
+										data-tooltip="a private citizen using their private auto to pickup and transport passengers for hire">Rideshare</a>
+									capability to the website so Uber, Lyft and other
+									<a href="#"
+										data-tooltip="a private citizen using their private auto to pickup and transport passengers for hire">rideshare</a>
+									drivers to apply for commercial auto insurance since their personal auto insurance
+									did not cover <a href="#"
+										data-tooltip="a private citizen using their private auto to pickup and transport passengers for hire">rideshare</a>
+									activity.
 								</div>
 							</div>
 						</div>
 						<div class="accordion-item">
-							<h2 class="accordion-header" id="headingThree">
+							<h2 class="accordion-header" id="headingG5">
 								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-									data-bs-target="#collapseThree" aria-expanded="false"
-									aria-controls="collapseThree">
+									data-bs-target="#collapseG5" aria-expanded="false" aria-controls="collapseG5">
 									My Contribution
 								</button>
 							</h2>
-							<div id="collapseThree" class="accordion-collapse collapse"
-								aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+							<div id="collapseG5" class="accordion-collapse collapse" aria-labelledby="headingThree"
+								data-bs-parent="#accordionExample">
 								<div class="accordion-body">
 									personally resulted in significant cost savings and productivity saving over
 									$450K USD with 15-20 man hours saved per week
@@ -231,14 +307,14 @@
 				</div>
 			</div>
 
-			<!-- GEICO Commercial Auto Website - Allow Rideshare customers -->
+			<!-- GEICO Commercial Auto Website - Allow Rideshare website -->
 			<div class="col-lg-6 col-md-12">
 				<div class="box bg-light h-100 d-flex p-4 flex-column text-blue shadow p-3 mb-5 bg-body rounded">
 					<img src="GEICO2.jpg" alt="Icon of GEICO where I did the following work described below">
-					<h1 style="color: green;">GEICO Commercial Auto Website - First Rideshare customers</h1>
+					<h1 style="color: green;">GEICO Commercial Auto Website - First Rideshare website</h1>
 					<h3></h3>
 
-					<div class="accordion" id="accordionExample">
+					<div class="accordion z-index-n1" id="accordionExample">
 						<div class="accordion-item">
 							<h2 class="accordion-header" id="headingOne">
 								<button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -268,17 +344,24 @@
 							<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
 								data-bs-parent="#accordionExample">
 								<div class="accordion-body">
-									There are over 1.7 million rideshare drivers in the U.S., mostly split up between Uber and Lyft drivers that did not have an
-									easy way to get auto insurace converge back in 2010. This was un "untapped market" with 1.7 million drivers! 
+									There are over 1.7 million rideshare drivers in the U.S., mostly split up between
+									Uber and Lyft drivers that did not have an
+									easy way to get auto insurace converge back in 2010. This was un "untapped market"
+									with 1.7 million drivers!
 									<p></p>
-									With the emergence of Rideshare in the U.S. circa 2010, private citizens began using their personal auto to
-									pickup and transport passengers for extra income. However, personal auto insurance did not cover personal vehicles 
-									when they were being used for commercial use. This created a problem of hundreds of thousands of uninsured rideshare 
+									With the emergence of Rideshare in the U.S. circa 2010, private citizens began using
+									their personal auto to
+									pickup and transport passengers for extra income. However, personal auto insurance
+									did not cover personal vehicles
+									when they were being used for commercial use. This created a problem of hundreds of
+									thousands of uninsured rideshare
 									drivers that GEICO wanted to be able to insure for an extra fee.
-									<p></p> GEICO needed this rideshare functionality added to their existing 
-									commercial auto website ASAP and did not have the time or money to wait since other insurance companies were interested
-									 in capturing these new customers. They reached out to me and my team based on our previous success with re-writing the
-									  entire GEICO website with responsive UI.					
+									<p></p> GEICO needed this rideshare functionality added to their existing
+									commercial auto website ASAP and did not have the time or money to wait since other
+									insurance companies were interested
+									in capturing these new customers. They reached out to me and my team based on our
+									previous success with re-writing the
+									entire GEICO website with responsive UI.
 								</div>
 							</div>
 						</div>
@@ -292,7 +375,8 @@
 							<div id="collapseTwoB" class="accordion-collapse collapse" aria-labelledby="headingTwoB"
 								data-bs-parent="#accordionExample">
 								<div class="accordion-body">
-									Under budget and on time, my team and I delivered new rideshare coverage capabilities to the existing GEICO Commercial 
+									Under budget and on time, my team and I delivered new rideshare coverage
+									capabilities to the existing GEICO Commercial
 									Auto website that DID capture many of the new 1.7 million rideshare customers.
 								</div>
 							</div>
@@ -300,15 +384,15 @@
 						<div class="accordion-item">
 							<h2 class="accordion-header" id="headingThree">
 								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-									data-bs-target="#collapseThree" aria-expanded="false"
-									aria-controls="collapseThree">
+									data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
 									My Contribution
 								</button>
 							</h2>
-							<div id="collapseThree" class="accordion-collapse collapse"
-								aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+							<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+								data-bs-parent="#accordionExample">
 								<div class="accordion-body">
-									Personally the lead software developer that captured potentially 1.7 million new customers <b>resulting in over 50 million in new earnings.</b>
+									Personally the lead software developer that captured potentially 1.7 million new
+									customers <b>resulting in over 50 million in new earnings.</b>
 								</div>
 							</div>
 						</div>
@@ -319,7 +403,8 @@
 
 			<div class="col-lg-6 col-md-12">
 				<div class="box bg-light h-100 d-flex p-4 flex-column text-blue shadow p-3 mb-5 bg-body rounded">
-					<img src="https://images.pexels.com/photos/5098043/pexels-photo-5098043.jpeg?auto=compress&cs=tinysrgb&w=200" alt="image representing PIMS work">
+					<img src="https://images.pexels.com/photos/5098043/pexels-photo-5098043.jpeg?auto=compress&cs=tinysrgb&w=200"
+						alt="image representing PIMS work">
 					<h1>PIMS - Passenger Information Management System</h1>
 
 					<div class="accordion" id="accordionExample">
@@ -334,9 +419,34 @@
 								data-bs-parent="#accordionExample">
 								<div class="accordion-body">
 									The global passenger rail transport market is expected to grow from $227.21
-									billion in 2021 to $250.93 billion in 2022 at a compound annual growth rate (CAGR) of 10.4%. The
+									billion in 2021 to $250.93 billion in 2022 at a compound annual growth rate (CAGR)
+									of 10.4%. The
 									market is expected to grow to $357.84 billion in 2026 at a compound
 									annual growth rate (CAGR) of 9.3%.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingTwo">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+									Technology I used
+								</button>
+							</h2>
+							<div id="collapseP1C" class="accordion-collapse collapse" aria-labelledby="headingP1C"
+								data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									At the time, my mastery of new technologies put me far ahead of others. I was able
+									to quickly and effectively
+									use new technologies. Responsive web design (the same page rearranges elements and
+									size based on the viewers
+									screen size. Someone using a phone screen might see a different web page then
+									someone on a desktop computer,
+									but all the same web page). When I was researching one of the first smart phones ,
+									so I could learn how to
+									code on it, I was in a hotel lobby and someone said @Sir why are you talking into
+									your kindle@?
+									- I still joke about that today.
 								</div>
 							</div>
 						</div>
@@ -350,11 +460,15 @@
 							<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
 								data-bs-parent="#accordionExample">
 								<div class="accordion-body">
-									Seattle Washington is a major U.S. city, with over 567,000 workers and an annual GDP of 16 billion in General Fund Revenue,
-									 home of Amazon and Starbucks Coffee, was expanding the passenger Seattle Washington Link Light Rail
-									and needed a new Passenger Information System to manage train, movements, schedules, estimate arrival times, messages that are
-									automated, scheduled, adhoc, and custom that can be played at any/all stations. The system needed extreme fault-tolerant reliability
-									with automatic failover at every step. <P></P>  
+									Seattle Washington is a major U.S. city, with over 567,000 workers and an annual GDP
+									of 16 billion in General Fund Revenue,
+									home of Amazon and Starbucks Coffee, was expanding the passenger Seattle Washington
+									Link Light Rail
+									and needed a new Passenger Information System to manage train, movements, schedules,
+									estimate arrival times, messages that are
+									automated, scheduled, adhoc, and custom that can be played at any/all stations. The
+									system needed extreme fault-tolerant reliability
+									with automatic failover at every step. <P></P>
 								</div>
 							</div>
 						</div>
@@ -384,65 +498,19 @@
 						<div class="accordion-item">
 							<h2 class="accordion-header" id="headingThree">
 								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-									data-bs-target="#collapseThree" aria-expanded="false"
-									aria-controls="collapseThree">
+									data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
 									My Contribution
 								</button>
 							</h2>
-							<div id="collapseThree" class="accordion-collapse collapse"
-								aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+							<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+								data-bs-parent="#accordionExample">
 								<div class="accordion-body">
-									Personally the lead software developer that captured potentially 1.7 million new customers <b>resulting in over 50 million in new earnings.</b>
+									Personally the lead software developer that captured potentially 1.7 million new
+									customers <b>resulting in over 50 million in new earnings.</b>
 								</div>
 							</div>
 						</div>
 					</div>
-					<a href="#" class="btn btn-dark">Read More</a>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6">
-				<div class="box bg-light h-100 d-flex p-4 flex-column text-blue shadow p-3 mb-5 bg-body rounded">
-					<!-- <img src="https://images.pexels.com/photos/999267/pexels-photo-999267.jpeg?auto=compress&cs=tinysrgb&w=1600"
-						alt=""> -->
-					<img src="card-drive.jpeg" alt="image of person with drive and commitment">
-					<!-- <img src="https://images.pexels.com/photos/258045/pexels-photo-258045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""> -->
-					<h1>Drive</h1>
-					<p>Successful people are known for having clear-cut goals that they work hard to reach.</p>
-					<p>
-						I have the ability to take initiative to improve processes. Vision, patience, and focus.</p>
-					<p>
-						Success builds upon a string of small achievements that amount to a larger success story.
-						I can overcome obstacles and make progress on my own when necessary.
-					</p>
-					<a href="#" class="btn btn-dark">Read More</a>
-				</div>
-			</div>
-
-			<!-- 			<div class="col-lg-3 col-md-4">
-				<div class="box bg-light h-100 d-flex p-4 flex-column text-blue shadow p-3 mb-5 bg-body rounded">
-					<img src="https://images.pexels.com/photos/3058762/pexels-photo-3058762.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-						alt="">
-					<h1>Education and Self Directed Learning</h1>
-					<p>My Bachelors in Computer Science from the University of Maryland, and my Graduate Masters of
-						Business Administration (MBA)
-						with a concentration in Project Management taught me how to achieve consistent successful
-						results. We live in interesting times
-						and I find ways to learn new things whenever possible to keep my mind sharp and ideas fresh.
-					</p>
-					<a href="#" class="btn btn-dark">Read More</a>
-				</div>
-			</div> -->
-
-			<div class="col-lg-4 col-md-6">
-				<div class="box bg-light h-100 d-flex p-4 flex-column text-blue shadow p-3 mb-5 bg-body rounded">
-					<!-- <img src="https://images.pexels.com/photos/3058762/pexels-photo-3058762.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""> -->
-					<img src="card-interesting-things.jpeg" alt="image of person engaging in interesting hobbies">
-					<h1>Interesting Things</h1>
-					<p>Find out about my latest personal projects in robotics, GPS aware websites and devices, single
-						board computers,
-						latest tools and tips and articles. The best learning is fun.
-					</p>
 					<a href="#" class="btn btn-dark">Read More</a>
 				</div>
 			</div>
