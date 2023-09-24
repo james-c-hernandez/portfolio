@@ -28,6 +28,37 @@
 		}
 	</style>
 
+	<style>
+		[data-tooltip] {
+			position: relative;
+			cursor: default;
+		}
+		[data-tooltip]::after {
+			position: absolute;
+			width: 280px;
+			left: calc(50%- 70px);
+			bottom: 125%;
+			text-align:center;
+			box-sizing: border-box;
+			content: attr(data-tooltip);
+			background: yellow;
+			padding: 8px;
+			border-radius: 10px;
+			font-size: 0.9em;
+			font-weight: bold;
+			visibility: hidden;
+			opacity: 0;
+			transform: translateY(10px);
+			transition: opacity 0.3s, transform 0.2s;
+		}
+
+		[data-tooltip]:hover::after {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+		}
+	</style>
+
 	<%- include('../partials/landing_hero_css.ejs') %>
 		<%- include('../partials/particles_css.ejs') %>
 
@@ -104,81 +135,13 @@
 
 	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-	<p>PORTFOLIO</p>
+	<p>Lists of Applications I created or was key developer of</p>
+	<p>I was a contractor and not a job hopper</p>
 
 	<div class="container">
+
 		<div class="row justify-content-center">
 
-			<div class="col-md-4">
-				<div class="card" style="width: 20rem;">
-					<div class="inner">
-						<img class="card-img-top" src="GEICO2.jpg" alt="card image cap">
-					</div>
-
-					<div class="card-body">
-						<h5 class="">GEICO - Commercial and Private Auto Insurance web sites</h5>
-						<div class="accordion" id="accordionExample">
-							<div class="accordion-item">
-								<h2 class="accordion-header" id="headingOne">
-									<button class="accordion-button" type="button" data-bs-toggle="collapse"
-										data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-										Relevance
-									</button>
-								</h2>
-								<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-									data-bs-parent="#accordionExample">
-									<div class="accordion-body">
-										GEICO, founded in 1936, manages more than 16 million auto policies in force and
-										insures more than 28 million vehicles. They have
-										expanded insurance coverage for home, rent, boat, and motorcycles. Owned by
-										Warren Buffett's massive holding company, GEICO
-										sustained high margins in its latest earnings report, posting a $514 million
-										pre-tax profit - Aug 2023
-									</div>
-								</div>
-							</div>
-							<div class="accordion-item">
-								<h2 class="accordion-header" id="headingTwo">
-									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-										data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-										My Role
-									</button>
-								</h2>
-								<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-									data-bs-parent="#accordionExample">
-									<div class="accordion-body">
-										Lead software engineer and team scrum master for developing the first mobile
-										commercial auto website UI upgrade for iPhones,tables, and Android web
-										enabled phones. I successfully completed nationwide upgrade in record breaking
-										time allowing in millions of customers to buy and manage their commercial
-										auto policies from their smart phones or tables now.<p></p>After this success, I
-										was made scrum master for a major upgrade of the main personal auto insurance
-										website code named EDGE. Brought key know-how into a larger diverse team to
-										increase their productivity and efficiency.
-									</div>
-								</div>
-							</div>
-							<div class="accordion-item">
-								<h2 class="accordion-header" id="headingThree">
-									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-										data-bs-target="#collapseThree" aria-expanded="false"
-										aria-controls="collapseThree">
-										My Contribution
-									</button>
-								</h2>
-								<div id="collapseThree" class="accordion-collapse collapse"
-									aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-									<div class="accordion-body">
-										personally resulted in significant cost savings and productivity saving over
-										$450K USD with 15-20 man hours saved per week
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
 
 			<div class="col-md-4">
 				<div class="card" style="width: 20rem;">
@@ -269,38 +232,177 @@
 
 		<div class="row gy-2">
 
-			<div class="col-lg-4 col-md-6">
+			<!-- GEICO Commercial Auto Website First responsive UI -->
+			<div class="col-lg-6 col-md-12">
 				<div class="box bg-light h-100 d-flex p-4 flex-column text-blue shadow p-3 mb-5 bg-body rounded">
-					<!-- <img src="https://images.pexels.com/photos/3153199/pexels-photo-3153199.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""> -->
-					<!-- <img src="https://images.pexels.com/photos/5716033/pexels-photo-5716033.jpeg?auto=compress&cs=tinysrgb&w=1600" -->
-					<img src="card-leadership.jpeg" alt="image of leadership">
-					<h1>Leadership</h1>
-					<p> Having attained my <B>MBA</B> after my <B>BSCS</B>, it gave me unique insight into developing
-						effective teams consisting and how clear objectives lead a group of people who work together to
-						achieve
-						a shared goal.</p>
-					<p>I use performance metrics to achieve consistently improving results, determine Returns on
-						Investments, Total Costs of Ownership, Opportunity Costs, and Project Capabilities and Costs.
-						Workforce management is also key to building highly effective team using effective people and
-						communication skills </p>
+					<img src="GEICO2.jpg" alt="Icon of GEICO where I did the following work described below">
+					<h1 style="color: green;">GEICO Commercial Auto Website - First responsive UI</h1>
+					<h3></h3>
+
+					<div class="accordion" id="accordionExample">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingOne">
+								<button class="accordion-button" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									Business Scope
+								</button>
+							</h2>
+							<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+								data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									GEICO, founded in 1936, manages more than 16 million auto policies in force and
+									insures more than 28 million vehicles. They have
+									expanded insurance coverage for home, rent, boat, and motorcycles. Owned by
+									Warren Buffett's massive holding company, GEICO
+									sustained high margins in its latest earnings report, posting a $514 million
+									pre-tax profit - Aug 2023
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingTwo">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+									The Problem I directly solved
+								</button>
+							</h2>
+							<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+								data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									I know the clean <A href="https://www.geico.com/commercial-auto-insurance/" target="_blank" rel="noopener noreferrer">GEICO Commercial Auto website</A> look is famous now, but when I was started at that company it's websites were many years old,cluttered, it was before the modern sleek look we know today. 
+									One day Website metric reports identified that there was a 100% drop off of customer applications on iPhone devices
+									and a 90% drop off on Android Phones. <p></p>
+									<b>I discovered using a iPhone emulator on a web browser, that the "CONTINUE" button was off-page and not clickable on smartphones. </b>
+									<p></p>Believe it or not, the website was not
+									<a href="#" data-tooltip="a obsolete fixed web page layout that does not dynamically adjust page elements based on screen size and aspect such as small smartphones">Responsive</a> back in 2010
+									and during our next daily scrum, I explained the problem and told the team I knew how to fix it. My solution was re-writing the existing site using responsive UI.
+									 <b>Management put me in charge of the project and gave me technical leadership</b> of a team of three developers including myself as lead.
+									commercial auto website UI upgrade for iPhone and Android smartphones and tablets.								
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingTwoB">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseTwoB" aria-expanded="false" aria-controls="collapseTwoB">
+									Success Achieved
+								</button>
+							</h2>
+							<div id="collapseTwoB" class="accordion-collapse collapse" aria-labelledby="headingTwoB"
+								data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									I modernized the GEICO Commercial Auto website in three weeks, which was record breaking for them. Specifically added new client side input Form Validation, First use of Glyph Icons, First Rounded Buttons and soft styles.   My update now allowed millions of customers to buy and manage their commercial
+									auto policies from their iPhone,Android phones now expanding business profit and customer satisfaction<p></p><b>After this success</b>, I
+									was put in charge of adding a new <a href="#" data-tooltip="a private citizen using their private auto to pickup and transport passengers for hire">Rideshare</a> capability to the website so  Uber, Lyft and other 
+									<a href="#" data-tooltip="a private citizen using their private auto to pickup and transport passengers for hire">rideshare</a>
+									 drivers to apply for commercial auto insurance since their personal auto insurance did not cover <a href="#" data-tooltip="a private citizen using their private auto to pickup and transport passengers for hire">rideshare</a>
+									  activity.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingThree">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseThree" aria-expanded="false"
+									aria-controls="collapseThree">
+									My Contribution
+								</button>
+							</h2>
+							<div id="collapseThree" class="accordion-collapse collapse"
+								aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									personally resulted in significant cost savings and productivity saving over
+									$450K USD with 15-20 man hours saved per week
+								</div>
+							</div>
+						</div>
+					</div>
 					<a href="#" class="btn btn-dark">Read More</a>
 				</div>
 			</div>
 
-			<div class="col-lg-4 col-md-6">
+			<!-- GEICO Commercial Auto Website - Allow Rideshare customers -->
+			<div class="col-lg-6 col-md-12">
 				<div class="box bg-light h-100 d-flex p-4 flex-column text-blue shadow p-3 mb-5 bg-body rounded">
-					<img src="card-technical-background.jpeg" alt="image of technical leadership">
-					<h1>Technical Background</h1>
-					<!-- <div id="particles-js" class="img-responsive" style="max-height:100px;"></div> -->
-					<!-- <div  class="img-responsive"><img src="https://images.pexels.com/photos/5053848/pexels-photo-5053848.jpeg?auto=compress" class="img-responsive"   style="max-height: 200px;width:min-content"></div>  -->
+					<img src="GEICO2.jpg" alt="Icon of GEICO where I did the following work described below">
+					<h1 style="color: green;">GEICO Commercial Auto Website - First Rideshare customers</h1>
+					<h3></h3>
 
-					<p>My Bachelors Degree in Computer Science from the University of Maryland was the realization of my
-						software passion from the age of 15, when I developed my first video game called Proton-Patrol.
-					</p>
-					<p>Today this passion drives me to learn the latest technologies and developments so that they can
-						improve our lives. Today this continues with and interest automation, robotics, GPS devices,
-						sensors, mobile development
-						and the Internet of Things (IOT) for embedded micro devices</p>
+					<div class="accordion" id="accordionExample">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingOne">
+								<button class="accordion-button" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									Business Scope
+								</button>
+							</h2>
+							<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+								data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									GEICO, founded in 1936, manages more than 16 million auto policies in force and
+									insures more than 28 million vehicles. They have
+									expanded insurance coverage for home, rent, boat, and motorcycles. Owned by
+									Warren Buffett's massive holding company, GEICO
+									sustained high margins in its latest earnings report, posting a $514 million
+									pre-tax profit - Aug 2023
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingTwo">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+									The Problem I directly solved
+								</button>
+							</h2>
+							<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+								data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									There are over 1.7 million rideshare drivers in the U.S., mostly split up between Uber and Lyft drivers that did not have an
+									easy way to get auto insurace converge back in 2010. This was un "untapped market" with 1.7 million drivers! 
+									<p></p>
+									With the emergence of Rideshare in the U.S. circa 2010, private citizens began using their personal auto to
+									pickup and transport passengers for extra income. However, personal auto insurance did not cover personal vehicles 
+									when they were being used for commercial use. This created a problem of hundreds of thousands of uninsured rideshare 
+									drivers that GEICO wanted to be able to insure for an extra fee.
+									<p></p> GEICO needed this rideshare functionality added to their existing 
+									commercial auto website ASAP and did not have the time or money to wait since other insurance companies were interested
+									 in capturing these new customers. They reached out to me and my team based on our previous success with re-writing the
+									  entire GEICO website with responsive UI.					
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingTwoB">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseTwoB" aria-expanded="false" aria-controls="collapseTwoB">
+									Success Achieved
+								</button>
+							</h2>
+							<div id="collapseTwoB" class="accordion-collapse collapse" aria-labelledby="headingTwoB"
+								data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									Under budget and on time, my team and I delivered new rideshare coverage capabilities to the existing GEICO Commercial 
+									Auto website that DID capture many of the new 1.7 million rideshare customers.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingThree">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseThree" aria-expanded="false"
+									aria-controls="collapseThree">
+									My Contribution
+								</button>
+							</h2>
+							<div id="collapseThree" class="accordion-collapse collapse"
+								aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+								<div class="accordion-body">
+									Personally the lead software developer that captured potentially 1.7 million new customers <b>resulting in over 50 million in new earnings.</b>
+								</div>
+							</div>
+						</div>
+					</div>
 					<a href="#" class="btn btn-dark">Read More</a>
 				</div>
 			</div>
@@ -369,6 +471,7 @@
 			</div>
 
 		</div>
+
 	</div>
 
 
