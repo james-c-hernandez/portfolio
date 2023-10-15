@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<style>
+	.stepper .nav-tabs {
+		position: relative;
+	}
+
+	.stepper .nav-tabs>li {
+		position: relative;
+	}
+
+	.stepper .nav-tabs>li:after {
+		content: '';
+		position: absolute;
+		background: #f1f1f1;
+		display: block;
+		width: 100%;
+		height: 5px;
+		top: 30px;
+		left: 50%;
+		z-index: 1;
+	}
+
+	.stepper .nav-tabs>li.completed::after {
+		background: #34bc9b;
+	}
+
+	.stepper .nav-tabs>li:last-child::after {
+		background: transparent;
+	}
+
+	.stepper .nav-tabs>li.active:last-child .round-tab {
+		background: #34bc9b;
+	}
+
+	.stepper .nav-tabs>li.active:last-child .round-tab::after {
+		content: '✔';
+		color: #fff;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		top: 0;
+		display: block;
+	}
+
+	.stepper .nav-tabs [data-toggle='tab'] {
+		width: 25px;
+		height: 25px;
+		margin: 20px auto;
+		border-radius: 100%;
+		border: none;
+		padding: 0;
+		color: #f1f1f1;
+	}
+
+	.stepper .nav-tabs [data-toggle='tab']:hover {
+		background: transparent;
+		border: none;
+	}
+
+	.stepper .nav-tabs>.active>[data-toggle='tab'],
+	.stepper .nav-tabs>.active>[data-toggle='tab']:hover,
+	.stepper .nav-tabs>.active>[data-toggle='tab']:focus {
+		color: #34bc9b;
+		cursor: default;
+		border: none;
+	}
+
+	.stepper .tab-pane {
+		position: relative;
+		padding-top: 50px;
+	}
+
+	.stepper .round-tab {
+		width: 25px;
+		height: 25px;
+		line-height: 22px;
+		display: inline-block;
+		border-radius: 25px;
+		background: #fff;
+		border: 2px solid #34bc9b;
+		color: #34bc9b;
+		z-index: 2;
+		position: absolute;
+		left: 0;
+		text-align: center;
+		font-size: 14px;
+	}
+
+	.stepper .completed .round-tab {
+		background: #34bc9b;
+	}
+
+	.stepper .completed .round-tab::after {
+		content: '✔';
+		color: #fff;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		top: 0;
+		display: block;
+	}
+
+	.stepper .active .round-tab {
+		background: #fff;
+		border: 2px solid #34bc9b;
+	}
+
+	.stepper .active .round-tab:hover {
+		background: #fff;
+		border: 2px solid #34bc9b;
+	}
+
+	.stepper .active .round-tab::after {
+		display: none;
+	}
+
+	.stepper .disabled .round-tab {
+		background: #fff;
+		color: #f1f1f1;
+		border-color: #f1f1f1;
+	}
+
+	.stepper .disabled .round-tab:hover {
+		color: #4dd3b6;
+		border: 2px solid #a6dfd3;
+	}
+
+	.stepper .disabled .round-tab::after {
+		display: none;
+	}
+</style>
+
+<head>
+	<title>Signup</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	<link href="/Content/Site.css" rel="stylesheet" />
+	<script src="https://kit.fontawesome.com/07324ff168.js"></script>
+	<style>
+		body {
+			margin: 20px;
+			margin-left: 0;
+			margin-right: 0;
+			font-family: sans-serif;
+			background-color: black;
+			color: white;
+			/* ADD THIS LINE */
+			/* Background styles */
+			/*background-image: url('https://codetheweb.blog/assets/img/posts/full-image-hero/image.jpg');*/
+			/*background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('https://codetheweb.blog/assets/img/posts/full-image-hero/image.jpg');*/
+			/*background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/672358/pexels-photo-672358.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');*/
+			/* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/2422292/pexels-photo-2422292.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'); */
+			background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/5439483/pexels-photo-5439483.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
+
+		.dropdown {
+			background-color: transparent;
+			color: white;
+
+		}
+
+		.single-line {
+			background-color: black;
+			color: wheat;
+			width: 40%;
+		}
+
+		.control-label {
+			text-align: left !important;
+		}
+
+		.field-validation-error {
+			color: red;
+			background-color: white;
+		}
+
+		textarea {
+			background-color: transparent !important;
+			color: wheat !important;
+		}
+
+		ul.no-bullets {
+			list-style-type: none;
+
+		}
+
+		a, a:hover, a:active, a:visited { color: white; }
+	</style>
+
+	<script>
+
+		$(document).ready(function () {
+			// getGPS();
+		});
+
+		function getGPS() {
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(showGPS);
+			}
+			else {
+				gpsText.innerText = "No GPS Functionality.";
+			}
+		}
+		function showGPS(position) {
+			//alert('Wow!');
+			document.cookie = "latitude=" + position.coords.latitude;
+			document.cookie = "longitude=" + position.coords.longitude;
+		}
+
+	</script>
+</head>
+
+<body>
+
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col-sm-2 hidden-xs"> </div>
+
+			<div class="col-sm-8 col-xs-12">
+				<h1>James C. Hernandez</h1>
+				<ul class="no-bullets">
+					<li>
+						<h3>Add email subject of 'James Portfolio'</h3>
+					</li>
+					<li>
+						<h3>include a your contact info</h3>
+					</li>
+					<li>
+						<h3>brief description of work</h3>
+					</li>
+					<li>
+						<h3>and time for us to talk</h3>
+					</li>
+					<li>
+						<h3>Email: James.Hernandez@outlook.com</h3>
+					</li>
+					<li>
+						<a href="/" class="btn btn-lg btn-danger" role="button">Back to top</a>
+					</li>
+					<li>
+						<h3><a href="JAMES HERNANDEZ-IT-Director-2023.docx"><i class="glyphicon glyphicon-floppy-save"></i>
+						Resume James C. Hernandez (MS-Word version)
+					</a></h3>
+					</li>
+					<li>
+						<h3><a href="JAMES HERNANDEZ-IT-Director-2023.pdf"><i class="glyphicon glyphicon-floppy-save"></i>
+						Resume James C. Hernandez (PDF version)
+						</a></h3>
+					</li>
+				</ul>
+			</div>
+
+			<div class="col-sm-2 hidden-xs"> </div>
+		</div>
+
+	</div>
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+	<script>
+		(function ($) {
+			'use strict';
+
+			$(function () {
+
+				$(document).ready(function () {
+					function triggerClick(elem) {
+						$(elem).click();
+					}
+					var $progressWizard = $('.stepper'),
+						$tab_active,
+						$tab_prev,
+						$tab_next,
+						$btn_prev = $progressWizard.find('.prev-step'),
+						$btn_next = $progressWizard.find('.next-step'),
+						$tab_toggle = $progressWizard.find('[data-toggle="tab"]'),
+						$tooltips = $progressWizard.find('[data-toggle="tab"][title]');
+
+					//Initialize tooltips
+					$tooltips.tooltip();
+
+					//Wizard
+					$tab_toggle.on('show.bs.tab', function (e) {
+						var $target = $(e.target);
+
+						if (!$target.parent().hasClass('active, disabled')) {
+							$target.parent().prev().addClass('completed');
+						}
+						if ($target.parent().hasClass('disabled')) {
+							return false;
+						}
+					});
+
+					$btn_next.on('click', function () {
+						$tab_active = $progressWizard.find('.active');
+
+						$tab_active.next().removeClass('disabled');
+
+						$tab_next = $tab_active.next().find('a[data-toggle="tab"]');
+						triggerClick($tab_next);
+
+					});
+
+					$btn_prev.click(function () {
+						$tab_active = $progressWizard.find('.active');
+						$tab_prev = $tab_active.prev().find('a[data-toggle="tab"]');
+						triggerClick($tab_prev);
+					});
+				});
+			});
+
+		}(jQuery, this));
+	</script>
+
+</body>
+
+</html>

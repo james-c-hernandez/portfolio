@@ -36,6 +36,14 @@ app.get('/index2', (req,res) => {
     res.render('index');
 })
 
+app.get('/contact', (req,res) => {
+    res.render('contact2')
+})
+
+app.get('/contact2', (req,res) => {
+    res.render('contact2')
+})
+
 app.get('/portfolio', (req,res) => {
     res.render('../portfolio/index');
 })
