@@ -29,11 +29,11 @@ console.log(name);
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.render('index2');
+    res.render('index');
 })
 
 app.get('/index2', (req,res) => {
-    res.render('index');
+    res.render('index2');
 })
 
 app.get('/contact', (req,res) => {
@@ -42,6 +42,18 @@ app.get('/contact', (req,res) => {
 
 app.get('/contact2', (req,res) => {
     res.render('contact2')
+})
+
+app.get('/threejsparticles', (req,res) => {
+    res.render('threejsparticles')
+})
+
+app.get('/threejstiefighter', (req,res) => {
+    res.render('threejstiefighter')
+})
+
+app.get('/threejsshadermoon',(req,res) => {
+    res.render('threejsshadermoon')
 })
 
 app.get('/portfolio', (req,res) => {

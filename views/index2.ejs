@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
@@ -21,49 +20,6 @@
 			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
 				integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
 				crossorigin="anonymous">
-			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-			<script type="text/javascript">
-				window.onresize = function () {
-					// alert("you resized");
-					drawChart();
-				}
-				// Load the Visualization API and the corechart package.
-				google.charts.load('current', { 'packages': ['corechart'] });
-
-				// Set a callback to run when the Google Visualization API is loaded.
-				google.charts.setOnLoadCallback(drawChart);
-
-				// Callback that creates and populates a data table,
-				// instantiates the pie chart, passes in the data and
-				// draws it.
-				function drawChart() {
-
-					// Create the data table.
-					var data = new google.visualization.DataTable();
-					data.addColumn('string', 'Topping');
-					data.addColumn('number', 'Slices');
-					data.addRows([
-						['Passion', 3],
-						['Hard Work', 1],
-						['Focus', 1],
-						['Process improvement', 1],
-						['Process Metrics', 2]
-					]);
-
-					// Set chart options
-					var options = {
-						'title': "James's ingredients for success",
-						'width': '100%',
-						'height': '100%'
-					};
-
-					// Instantiate and draw our chart, passing in some options.
-					var chart = new google.visualization.PieChart(document.getElementById('pie_chart'));
-					chart.draw(data, options);
-				}
-			</script>
-
 </head>
 
 <body>
@@ -71,19 +27,10 @@
 	<div class="container-fluid mt-3"></div>
 	<div class="hero-image" id="particles-js" style="max-height: 350px;overflow: hidden;">
 		<div class="hero-text">
-			<!-- <h1 style="font-size:50px">James C Hernandez</h1> -->
-			<div class="d-none d-sm-block">
-				<h1 class="fs-1">James C. Hernandez</h1>
-				<!-- <h2 class="fs-3">Visit my Portfolio of Success</h2> -->
-				<!-- <h3 class="fs-3">Imagine What Things I Can Do For You</h3> -->
-			</div>
-			<div class="d-sm-none d-md-none d-lg-none">
-				<h1 class="fs-2">James C. Hernandez</h1>
-				<!-- <h2 class="fs-6">Visit my Portfolio of Success</h2> -->
-				<!-- <h3 class="fs-6">Imagine What Things I Can Do For You</h3> -->
-			</div>
-			<!-- <button type="button" class="btn brn-light">Hire me</button> -->
-			<a href="contact" class="btn btn-light" role="button">Contact me</a>
+			<h1 style="font-size:50px">James C Hernandez</h1>
+			<h2>Your Ideas turned into Results</h2>
+			<h3>Leadership with a solid technical background</h3>
+			<button type="button" class="btn brn-light">What I Can Bring To Your Team</button>
 		</div>
 	</div>
 
@@ -96,91 +43,76 @@
 	<div class="container">
 		<div class="row gy-2">
 
-			<!-- Leadership -->
-			<div class="col-lg-4 col-md-6">
+			<div class="col-lg-3 col-md-4">
 				<div class="box bg-light h-100 d-flex p-4 flex-column text-blue shadow p-3 mb-5 bg-body rounded">
 					<!-- <img src="https://images.pexels.com/photos/3153199/pexels-photo-3153199.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""> -->
-					<!-- <img src="https://images.pexels.com/photos/5716033/pexels-photo-5716033.jpeg?auto=compress&cs=tinysrgb&w=1600" -->
-					<img src="card-leadership.jpeg" alt="image of leadership">
+					<img src="https://images.pexels.com/photos/5716033/pexels-photo-5716033.jpeg?auto=compress&cs=tinysrgb&w=1600"
+						alt="">
 					<h1>Leadership</h1>
-					<p>I am a people person, great communicator, and technical expert that can
-					set policies and objectives with a full understanding of software.</p>
-
-					<p>The true key to success is having a rare blend of both technical and leadership skills which are
-						vital to the success of any organization. 
-					</p>
-					<p> While working to complete my <B>MBA</B> after my <B>BSCS</B>,  my technical background
-						gave me the unique insight into	developing effective teams. My success is driven at
-						two levels; At the high level by opportunity costs and return on investment, 
-						and at a lower level by clear objectives driven by proven technology guidance.</p>
+					<p> Having attained my <B>MBA</B> after my <B>BSCS</B>, it gave me unique insight into developing
+						effective teams consisting and how clear objectives lead a group of people who work together to
+						achieve
+						a shared goal.</p>
+					<p>I use performance metrics to achieve consistently improving results, determine Returns on
+						Investments, Total Costs of Ownership, Opportunity Costs, and Project Capabilities and Costs.
+						Workforce management is also key to building highly effective team using effective people and
+						communication skills </p>
+					<a href="#" class="btn btn-dark">Read More</a>
 				</div>
 			</div>
 
-			<!-- Technical Background -->
-			<div class="col-lg-4 col-md-6">
+			<div class="col-lg-3 col-md-4">
 				<div class="box bg-light h-100 d-flex p-4 flex-column text-blue shadow p-3 mb-5 bg-body rounded">
-					<img src="card-technical-background.jpeg" alt="image of technical leadership">
+					<!-- <img src="https://images.pexels.com/photos/5053848/pexels-photo-5053848.jpeg?auto=compress" alt=""> -->
+					<img src="card-technical-leadership.jpeg" alt="image of technical leadership">
 					<h1>Technical Background</h1>
 					<!-- <div id="particles-js" class="img-responsive" style="max-height:100px;"></div> -->
 					<!-- <div  class="img-responsive"><img src="https://images.pexels.com/photos/5053848/pexels-photo-5053848.jpeg?auto=compress" class="img-responsive"   style="max-height: 200px;width:min-content"></div>  -->
 
-					<p>I first discovered that I had a passion at the age of fifteen, when I developed my first
-						video game called Proton Patrol. This inspired me to pursue a Bachelors Degree in 
-						Computer Science from the University of Maryland.
+					<p>My Bachelors Degree in Computer Science from the University of Maryland was the realization of my
+						software passion from the age of 15, when I developed my first video game called Proton-Patrol.
 					</p>
-
-					<p>I am driven to learn the latest technologies and developments so that they can
-						improve our lives. Today this passion continues with an interest in automation, robotics,
-						GPS devices, sensors, mobile development and the Internet of Things (<b>IoT</b>) for 
-						embedded smart micro devices.</p>
-					<p>My Windows and Linux software expertise is in the following computer languages: C, C++, SQL,NodeJS, Python, Erlang OTP, Elixir, Bash Shell, 
-						PowerShell, CMD Shell. Databases: SQL, SqlServer, Postgres, Oracle, Access. Network: WebAPI, WSDL, TCP, UDP.
-						IoT: GPIO, GPS sensors, ultrasonic range sensors, servo motor control, robotics, solar
-						powered systems. 
-					</p>
-					<!-- <a href="#" class="btn btn-dark">Read More</a> -->
+					<p>Today this passion drives me to learn the latest technologies and developments so that they can
+						improve our lives. Today this continues with and interest automation, robotics, GPS devices,
+						sensors, mobile development
+						and the Internet of Things (IOT) for embedded micro devices</p>
+					<a href="#" class="btn btn-dark">Read More</a>
 				</div>
 			</div>
 
-			<!-- Portfolio of Success -->
-			<div class="col-lg-4 col-md-6">
+			<div class="col-lg-3 col-md-4">
 				<div class="box bg-light h-100 d-flex p-4 flex-column text-blue shadow p-3 mb-5 bg-body rounded">
-					<img src="card-portfolio.jpeg" alt="image of showing portfolio of work">
+					<img src="https://images.pexels.com/photos/5716001/pexels-photo-5716001.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+						alt="">
 					<h1>Portfolio of Success</h1>
-					<p>
-					<div class="card_body" id="pie_chart"></div>
+					<p>By reducing the total cost of ownership, maximizing return on investment (ROI) using efficiency
+						metrics.
+						I have increased team efficiency and output, reduced costs and defects. Building clear
+						efficient systems
+						and team skill development using cross training and mentoring.
 					</p>
-					<p>My goals are to reduce the total cost of ownership and to maximize the return on investment (ROI) using
-						technical leadership, controls, policy and efficiency monitoring metrics.
-						I have increased team efficiency and output, reduced costs and defects. I build clear and
-						efficient systems and develop highly effective teams with cross training and mentoring.
-						I like to create <b><i>executive dashboards and business APIs</i></b>. 
-						 same techniques were keys of success for Amazon, Apple, Microsoft etc.
-					</p>
-					<a href="/portfolio" class="btn btn-dark">See My Portfolio</a>
+					<a href="#" class="btn btn-dark">Read More</a>
 				</div>
 			</div>
 
-			<!-- Drive -->
-			<div class="col-lg-4 col-md-6">
+			<div class="col-lg-3 col-md-4">
 				<div class="box bg-light h-100 d-flex p-4 flex-column text-blue shadow p-3 mb-5 bg-body rounded">
-					<!-- <img src="https://images.pexels.com/photos/999267/pexels-photo-999267.jpeg?auto=compress&cs=tinysrgb&w=1600"
-						alt=""> -->
-					<img src="card-drive.jpeg" alt="image of person with drive and commitment">
+					<img src="https://images.pexels.com/photos/999267/pexels-photo-999267.jpeg?auto=compress&cs=tinysrgb&w=1600"
+						alt="">
 					<!-- <img src="https://images.pexels.com/photos/258045/pexels-photo-258045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""> -->
 					<h1>Drive</h1>
-					<p>Successful people are known for having clearly defined goals that they work hard to reach.</p>
+					<p>Successful people are known for having clear-cut goals that they work hard to reach.</p>
 					<p>
-						I have the ability to take initiative to improve processes with vision, focus, and guidance.</p>
+						I have the ability to take initiative to improve processes. Vision, patience, and focus.</p>
 					<p>
 						Success builds upon a string of small achievements that amount to a larger success story.
 						I can overcome obstacles and make progress on my own when necessary.
 					</p>
-					<!-- <a href="#" class="btn btn-dark">Read More</a> -->
+					<a href="#" class="btn btn-dark">Read More</a>
 				</div>
 			</div>
 
-			<!-- 			<div class="col-lg-3 col-md-4">
+<!-- 			<div class="col-lg-3 col-md-4">
 				<div class="box bg-light h-100 d-flex p-4 flex-column text-blue shadow p-3 mb-5 bg-body rounded">
 					<img src="https://images.pexels.com/photos/3058762/pexels-photo-3058762.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 						alt="">
@@ -195,26 +127,15 @@
 				</div>
 			</div> -->
 
-			<div class="col-lg-4 col-md-6">
+			<div class="col-lg-3 col-md-4">
 				<div class="box bg-light h-100 d-flex p-4 flex-column text-blue shadow p-3 mb-5 bg-body rounded">
-					<!-- <img src="https://images.pexels.com/photos/3058762/pexels-photo-3058762.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""> -->
-					<img src="card-interesting-things.jpeg" alt="image of person engaging in interesting hobbies">
-					<h1>About Me</h1>
-					<p>In my spare time I develop personal projects in robotics, GPS aware websites and devices,
-						 pocket computers, learned to fly a arial drones, connected GPS sensors into
-						 my computer, connected ultrasonic range finder into my computer to avoid obstacles,
-						 designed a GPS navigation computer for a 30-foot boat.
-					<p>During Covid I created two walking robot dogs controlled with an onboard Raspberry PI CPU.
-						The first was a DIY kit controlled by bluetooth. I then scratch built my own four legged
-						robot controlled over WiFi with four hips and knees for full mobility.</p>
-					<p>I learned to fly arial drones and learned how they use solid state accelerometers to
-						achieve level flight and orientation, mini GPS sensor for location, and mini
-						flight controller (a nav-computer) to set waypoints, speed, direction and height. 
-						<b><i>This technology is what they use to make robots walk on two legs and SpaceX land
-							 rockets</i></b>. This fantastic new technology will make driverless 
-							 vehicles and autonomous robots common soon.
+					<img src="https://images.pexels.com/photos/3058762/pexels-photo-3058762.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+						alt="">
+					<h1>Interesting Things</h1>
+					<p>Find out about my latest personal projects in robotics, GPS aware websites and devices, single board computers, 
+						latest tools and tips and articles. The best learning is fun.
 					</p>
-					<!-- <a href="#" class="btn btn-dark">Read More</a> -->
+					<a href="#" class="btn btn-dark">Read More</a>
 				</div>
 			</div>
 

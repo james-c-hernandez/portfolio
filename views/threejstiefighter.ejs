@@ -1,0 +1,90 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!-- Origin Trial Token, feature = WebVR (For Chrome M62+), origin = https://clara.io, expires = 2018-09-11 -->
+  <meta http-equiv="origin-trial" data-feature="WebVR (For Chrome M62+)" data-expires="2018-09-11" content="Aly0Iq+ZYQ4JFQ4mx3a4ukJSqLFss91mWVDeoIeOaIHg7XLZ1LX9aiKPr7oWDD97w49qSrSeXwXJzjzWwLgCtAUAAABNeyJvcmlnaW4iOiJodHRwczovL2NsYXJhLmlvOjQ0MyIsImZlYXR1cmUiOiJXZWJWUjEuMU02MiIsImV4cGlyeSI6MTUzNjYyNDAwMH0=">
+  <title>Star Wars Vader TIE Fighter · v2 · Clara.io</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <style>
+    body {
+      margin: 0
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container" style="position: absolute; height: 100%; width: 100%;">
+    <div style="position: absolute; height: 100%; width: 100%; background: url(/api/scenes/30705937-432c-4326-8ec7-4504792e7ec5/v2thumbnail) no-repeat center center; background-size: contain;">
+    </div>
+  </div>
+  <script>(function() {
+  // Let embed know we are loading the scene out of band.
+  window.claraPlayerExternal = {};
+
+  function reportError(msg) {
+    if (typeof player !== 'undefined') {
+      player.sceneIO.reportError(msg);
+    } else {
+      claraPlayerExternal.error = msg;
+    }
+  }
+
+  var sceneId = '30705937-432c-4326-8ec7-4504792e7ec5';
+
+  var startTime = new Date();
+  var LOAD_SLOW_THRESHOLD = 10000;
+  var LOAD_FAIL_THRESHOLD = 30000;
+
+  var slowLoadTimeout = setTimeout(function() {
+    if (typeof player !== 'undefined') {
+      player._store.error(new Error('Slow Load'), null, { sceneId: sceneId });
+    }
+  }, LOAD_SLOW_THRESHOLD);
+
+  var loadFailure = setTimeout(function() {
+    if (typeof player !== 'undefined') {
+      player._store.error(new Error('Load Failure'), null, {
+        sceneId: sceneId,
+      });
+    }
+  }, LOAD_FAIL_THRESHOLD);
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'https://clara.io/resources/37c84aed18f7a4f6b008e27760d1d700', true);
+  xhr.responseType = 'text';
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState > 1) {
+      clearTimeout(slowLoadTimeout);
+      clearTimeout(loadFailure);
+    }
+  };
+  xhr.onload = function(response) {
+    if (xhr.status >= 200 && xhr.status < 400) {
+      if (typeof player !== 'undefined') {
+        player.sceneIO
+          .loadScene(sceneId, xhr.response, new Date() - startTime)
+          .then(function() {
+            player.sceneIO.useScene(sceneId);
+          });
+      } else {
+        claraPlayerExternal.content = xhr.response;
+      }
+    } else {
+      reportError(xhr.statusText || 'Error Loading Scene');
+    }
+  };
+
+  xhr.onerror = function(res) {
+    reportError('Error Loading Scene');
+  };
+
+  xhr.send();
+})();
+</script>
+  <script src="/js/claraplayer-2.3.117.min.js" type="text/javascript"></script>
+  <script>!function(n){function r(t){if(e[t])return e[t].exports;var o=e[t]={i:t,l:!1,exports:{}};return n[t].call(o.exports,o,o.exports,r),o.l=!0,o.exports}var e={};r.m=n,r.c=e,r.i=function(n){return n},r.d=function(n,e,t){r.o(n,e)||Object.defineProperty(n,e,{configurable:!1,enumerable:!0,get:t})},r.n=function(n){var e=n&&n.__esModule?function(){return n.default}:function(){return n};return r.d(e,"a",e),e},r.o=function(n,r){return Object.prototype.hasOwnProperty.call(n,r)},r.p="",r(r.s=0)}([function(n,r,e){"use strict";var t=window.location.pathname.split("/"),o=t[t.length-1],i=claraplayer("container");window.player=i,window.api=i,i.initializePlayer(o,{useQueryParams:!0})}]);</script>
+</body>
+
+</html>
